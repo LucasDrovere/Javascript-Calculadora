@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Page Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+       #b{
+            width: 500px;
+            /* Largura fixa para a div */
+            min-height: 200px;
+            /* Altura mínima */
+            height: auto !important;
+            /* Altura ajustável de acordo com o conteúdo */
+            height: 200px;
+            /* Altura mínima para IE */
+            background-image: url("bolso.jpg");
+            /* Aqui vai a mesma imagem que usamos acima */
+            background-size: 100% 100%;
+            /* Imagem ocupando toda largura e altura da div */
+            -webkit-background-size: 100%;
+            -o-background-size: 100%;
+            -khtml-background-size: 100%;
+            -moz-background-size: 100% 100%;
+        
+
+        }      
+    </style>
+
+    </style>
+    <script type="text/javascript">
+
+        /**
+                function somar() {
+                    let x;
+                    let y;
+                    let z;
+                    x = document.getElementById("valor1").value;
+                    y = document.getElementById("valor2").value;
+        
+                    z = parseInt(x) + parseInt(y);
+        
+                    alert("valor da operação é  " + z);
+                }
+                function divisao() {
+        
+                    x = document.getElementById('valor1').value;
+                    if (x == 0) {
+                        alert("NÃO EXISTE DIVISÃO POR ZERO")
+                    }
+                    y = document.getElementById('valor2').value;
+                    if (y == 0) {
+                        alert("NÃO EXISTE DIVISÃO POR ZERO");
+        
+                    }
+                    z = parseInt(x) / parseInt(y);
+        
+                    alert("valor da operação é  " + z);
+                }
+                function multiplicacao() {
+        
+                    x = document.getElementById('valor1').value;
+                    y = document.getElementById('valor2').value;
+        
+                    z = parseInt(x) * parseInt(y);
+        
+                    alert("valor da operação é  " + z);
+                }
+                function subtracao() {
+        
+                    x = document.getElementById('valor1').value;
+                    y = document.getElementById('valor2').value;
+        
+                    z = parseInt(x) - parseInt(y);
+        
+                    alert("valor da operação é  " + z);
+                }
+        
+                ====================== HTML BÁSICO ======================
+                VALOR 1 :<input id="valor1" type="text" placeholder="Digite valor 1!" />
+            </br>
+            </br>
+            VALOR 2 :<input id="valor2" type="text" placeholder="Digite valor 2!" /></br> </br>
+        
+            <button type="button" onclick="somar();">SOMA</button>
+            <button type="button" onclick="subtracao();">SUBTRAÇÃO</button></br></br>
+            <button type="button" onclick="divisao();">DIVISÃO</button>
+            <button type="button" onclick="multiplicacao();">MULTIPLICAÇÃO</button></br></br></br></br>
+           
+        
+        
+        
+        **/
+        function botao1(num) {
+            var salvo = document.getElementById("visor");
+            salvo.value = salvo.value + num.value;
+
+        }
+
+        function operacao() {
+
+            resultado = eval(visor.value);
+            visor.value = resultado;
+        }
+
+        function limpar() {
+            visor.value = "";
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="b" align="center" >
+        <h1>CALCULADORA CAÇIO</h1>
+
+        <input type="text" id="visor" />
+        </br>
+        <button id="1" value="1" onclick="botao1(this)">1</button>
+        <button id="2" value="2" onclick="botao1(this)">2</button>
+        <button id="3" value="3" onclick="botao1(this)">3</button>
+        <button id "soma" value="+" onclick="botao1(this)">+</button>
+        <button id="limpar" onclick="limpar();">CE</button>
+        </br>
+        <button id="4" value="4" onclick="botao1(this)">4</button>
+        <button id="5" value="5" onclick="botao1(this)">5</button>
+        <button id="6" value="6" onclick="botao1(this)">6</button>
+        <button id="subtracao" value="-" onclick="botao1(this)">-</button>
+        </br>
+        <button id="7" value="7" onclick="botao1(this)">7</button>
+        <button id="8" value="8" onclick="botao1(this)">8</button>
+        <button id="9" value="9" onclick="botao1(this)">9</button>
+        <button id="divisao" value="/" onclick="botao1(this)">/</button>
+        </br>
+        <button id="0" value="0" onclick="botao1(this)">0</button>
+        <button id="ponto" value="." onclick="botao1(this)">.</button>
+        <button id="igual" onclick="operacao();">=</button>
+        <button id="multiplicacao" value="*" onclick="botao1(this)">*</button>
+        </br>
+
+
+    </div>
+
+</body>
+
+</html>
